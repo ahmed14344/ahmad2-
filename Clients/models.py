@@ -1,5 +1,5 @@
 from django.db import models
-
+ 
 class Client(models.Model):
     الاسم = models.CharField(max_length=100)
     البريد_الإلكتروني = models.EmailField(unique=True)
