@@ -46,7 +46,7 @@ ROOT_URLCONF = 'ahmad2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],      # مسارات القوالب المخصصة (HTML)
+        'DIRS': [BASE_DIR / 'templates'],   # تعريف مجلد القوالب
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,7 +97,13 @@ USE_TZ = True    # استخدام المنطقة الزمنية
 
 
 # الملفات الثابتة (CSS, JavaScript, صور)
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]   # المجلد الخاص بالملفات أثناء التطوير
+STATIC_ROOT = BASE_DIR / "staticfiles"     # مجلد التجميع النهائي (collectstatic)
+
+# ملفات الوسائط (الصور/الملفات المرفوعة من المستخدمين)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media"
 
 # نوع المفتاح الافتراضي للجداول
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

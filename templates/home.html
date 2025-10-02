@@ -1,0 +1,40 @@
+<!-- C:\Users\rokoo\ahmad2\templates\home.html -->
+{% include 'header.html' %}
+
+<main>
+  <style>
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    main h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #002b5c;
+    }
+    main p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: #f0a500;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #cc8500;
+    }
+  </style>
+
+  <h1>مرحبا بك في CarRent</h1>
+  <p>أفضل خدمة لتأجير المركبات بأسعار تنافسية وجودة عالية.</p>
+  <a href="/fleet" class="btn-primary">استعرض السيارات</a>
+</main>
+
+{% include 'footer.html' %}
